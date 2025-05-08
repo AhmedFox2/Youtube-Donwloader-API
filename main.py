@@ -185,6 +185,3 @@ def serve_file(task_id: str):
     if file_path and os.path.exists(file_path):
         return FileResponse(file_path, filename=os.path.basename(file_path))
     return JSONResponse(content={"error": "File not found!"}, status_code=404)
-
-if __name__ == "__main__":
-    None
